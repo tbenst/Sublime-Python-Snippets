@@ -1,0 +1,25 @@
+<snippet>
+    <tabTrigger>def</tabTrigger>
+    <scope>source.python</scope>
+    <description>Function</description>
+
+    <content><![CDATA[def ${1:function}($2) -> (${3:None}):
+    """
+    ${4:Heading}
+
+    ${5:Description}
+
+    Args:
+${2/(?(DEFINE)(?'quote'(?:((?<q>["'])(?:(?!\k<q>|\\).)*(?:\\.(?:(?!\k<q>|\\).)*)*\k<q>))))(?(DEFINE)(?'delim'(?:,\s?)))(?(DEFINE)(?'paren'(?:(\((?>[^()]|(?&paren))*\)))))(?(DEFINE)(?'brac'(?:(\[(?>[^\[\]]|(?&brac))*\]))))(?(DEFINE)(?'curl'(?:(\{(?>[^\{\}]|(?&curl))*\}))))(?(DEFINE)(?'equal'(?:=\s?(?:(?P>quote)|(?>\w+)|(?P>brac)|(?P>curl)|(?P>paren))(?:(?P>delim)|\z))))(?'var'(?>\w+))((?>:\s\w+)(?:(?P>equal)|(?P>delim)|\z)|\s?(?P>equal)|(?P>delim)|\z)/\t\t$+{var}: \n/g}
+
+    Returns:
+        ${6:Return description with}
+
+    Tests:
+        >>> ${7:2+2}
+        ${8:4}
+
+    """
+
+    ${0:pass}]]></content>
+</snippet>
