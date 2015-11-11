@@ -1,7 +1,7 @@
 # Sublime-Python-Snippets
 Contains a replacement for the def snippet in Python that supports type hinting &amp; automatically creates a Docstring with the argument list pre-populated. Supports PEP257. Written for Sublime Text 3.
 
-# Example
+## Example
 
 To try, type def[tab][tab] and type some variables. They will be automatically populated under Args
 
@@ -30,7 +30,7 @@ To try, type def[tab][tab] and type some variables. They will be automatically p
         pass
 ```
 
-# Setup
+## Setup
 
 1. install [PackageResourceViewer](https://github.com/skuroda/PackageResourceViewer) using [Package Control](https://packagecontrol.io/).
 2. Using the Command Palette (cmd-shift-P on Mac), select PackageResourceViewer: Open Resource -> Python -> function.sublime-snippet.
@@ -49,7 +49,7 @@ To try, type def[tab][tab] and type some variables. They will be automatically p
     
         { "key": "selector", "operator": "not_equal", "operand": "meta.function.parameters.python", "match_all": true },
 
-# The belly of the beast
+## The belly of the beast
 
 Here's what the Regex looks like for substituting in the variable name in the Docstring. It was non-trivial to support Type Hinting, nested Lists, Tuples, Dicts, escaped quotes, etc.
 
